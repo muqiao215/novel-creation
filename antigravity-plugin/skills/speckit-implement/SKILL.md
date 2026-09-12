@@ -1,12 +1,11 @@
 ---
+name: speckit-implement
 description: Execute the implementation plan by processing and executing all tasks defined in tasks.md
 ---
 
 ## User Input
 
-```text
-$ARGUMENTS
-```
+The user's input for this invocation is the text they typed after `/speckit-implement` in the triggering message. It may be empty; do not ask the user to repeat it.
 
 You **MUST** consider the user input before proceeding (if not empty).
 

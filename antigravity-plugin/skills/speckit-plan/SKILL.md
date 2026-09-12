@@ -1,12 +1,11 @@
 ---
+name: speckit-plan
 description: Execute the implementation planning workflow using the plan template to generate design artifacts.
 ---
 
 ## User Input
 
-```text
-$ARGUMENTS
-```
+The user's input for this invocation is the text they typed after `/speckit-plan` in the triggering message. It may be empty; do not ask the user to repeat it.
 
 You **MUST** consider the user input before proceeding (if not empty).
 

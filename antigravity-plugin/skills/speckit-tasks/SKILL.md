@@ -1,12 +1,11 @@
 ---
+name: speckit-tasks
 description: Generate an actionable, dependency-ordered tasks.md for the feature based on available design artifacts.
 ---
 
 ## User Input
 
-```text
-$ARGUMENTS
-```
+The user's input for this invocation is the text they typed after `/speckit-tasks` in the triggering message. It may be empty; do not ask the user to repeat it.
 
 You **MUST** consider the user input before proceeding (if not empty).
 
@@ -67,7 +66,7 @@ You **MUST** consider the user input before proceeding (if not empty).
    - Independent test criteria for each story
    - Suggested MVP scope (typically just User Story 1)
 
-Context for task generation: $ARGUMENTS
+Context for task generation: the user's input after the command
 
 The tasks.md should be immediately executable - each task must be specific enough that an LLM can complete it without additional context.
 

@@ -1,12 +1,11 @@
 ---
+name: speckit-analyze
 description: Perform a non-destructive cross-artifact consistency and quality analysis across spec.md, plan.md, and tasks.md after task generation.
 ---
 
 ## User Input
 
-```text
-$ARGUMENTS
-```
+The user's input for this invocation is the text they typed after `/speckit-analyze` in the triggering message. It may be empty; do not ask the user to repeat it.
 
 You **MUST** consider the user input before proceeding (if not empty).
 
@@ -181,4 +180,4 @@ Ask the user: "Would you like me to suggest concrete remediation edits for the t
 
 ## Context
 
-$ARGUMENTS
+The user's input after the command (if any), plus the artifacts loaded below.

@@ -1,0 +1,5 @@
+{
+  "$schema": "https://antigravity.google/schemas/v1/plugin.json",
+  "name": "novel-creation",
+  "description": "Spec-driven novel creation workflow (Spec Kit style): constitution, specify, clarify, plan, tasks, implement, analyze, checklist. Requires the .specify/ scaffold in the working project."
+}

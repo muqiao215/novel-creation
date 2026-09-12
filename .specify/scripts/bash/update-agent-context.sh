@@ -30,12 +30,12 @@
 #
 # 5. Multi-Agent Support
 #    - Handles agent-specific file paths and naming conventions
-#    - Supports: Claude, Gemini, Copilot, Cursor, Qwen, opencode, Codex, Windsurf, Kilo Code, Auggie CLI, or Amazon Q Developer CLI
+#    - Supports: Claude, Gemini, Antigravity, Copilot, Cursor, Qwen, opencode, Codex, Windsurf, Kilo Code, Auggie CLI, Roo Code, CodeBuddy, or Amazon Q Developer CLI
 #    - Can update single agents or all existing agent files
 #    - Creates default Claude file if no agent files exist
 #
 # Usage: ./update-agent-context.sh [agent_type]
-# Agent types: claude|gemini|iflow|copilot|cursor|qwen|opencode|codex|windsurf|kilocode|auggie|q
+# Agent types: claude|gemini|antigravity|copilot|cursor|qwen|opencode|codex|windsurf|kilocode|auggie|roo|codebuddy|q
 # Leave empty to update all existing agent files
 
 set -e
@@ -555,6 +555,9 @@ update_specific_agent() {
         gemini)
             update_agent_file "$GEMINI_FILE" "Gemini CLI"
             ;;
+        antigravity)
+            update_agent_file "$AGENTS_FILE" "Antigravity CLI"
+            ;;
         copilot)
             update_agent_file "$COPILOT_FILE" "GitHub Copilot"
             ;;
@@ -590,7 +593,7 @@ update_specific_agent() {
             ;;
         *)
             log_error "Unknown agent type '$agent_type'"
-            log_error "Expected: claude|gemini|copilot|cursor|qwen|opencode|codex|windsurf|kilocode|auggie|roo|q"
+            log_error "Expected: claude|gemini|antigravity|copilot|cursor|qwen|opencode|codex|windsurf|kilocode|auggie|roo|codebuddy|q"
             exit 1
             ;;
     esac
@@ -684,7 +687,7 @@ print_summary() {
     
     echo
 
-    log_info "Usage: $0 [claude|gemini|iflow|copilot|cursor|qwen|opencode|codex|windsurf|kilocode|auggie|codebuddy|q]"
+    log_info "Usage: $0 [claude|gemini|antigravity|copilot|cursor|qwen|opencode|codex|windsurf|kilocode|auggie|roo|codebuddy|q]"
 }
 
 #==============================================================================

@@ -1,12 +1,11 @@
 ---
+name: speckit-constitution
 description: Create or update the project constitution from interactive or provided principle inputs, ensuring all dependent templates stay in sync.
 ---
 
 ## User Input
 
-```text
-$ARGUMENTS
-```
+The user's input for this invocation is the text they typed after `/speckit-constitution` in the triggering message. It may be empty; do not ask the user to repeat it.
 
 You **MUST** consider the user input before proceeding (if not empty).
 
