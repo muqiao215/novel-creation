@@ -50,28 +50,27 @@ You **MUST** consider the user input before proceeding (if not empty).
 
 **Output**: research.md with all NEEDS CLARIFICATION resolved
 
-### Phase 1: Design & Contracts
+### Phase 1: Design & World Anchors
 
 **Prerequisites:** `research.md` complete
 
-1. **Extract entities from feature spec** → `data-model.md`:
-   - Entity name, fields, relationships
-   - Validation rules from requirements
-   - State transitions if applicable
+1. **Extract characters & entities from spec** → `characters.md`:
+   - Character name, age, physical traits, hidden identity, wounds & motivations
+   - Behavioral habits, speech patterns, secret agendas
+   - Character facts consistency rules
 
-2. **Generate API contracts** from functional requirements:
-   - For each user action → endpoint
-   - Use standard REST/GraphQL patterns
-   - Output OpenAPI/GraphQL schema to `/contracts/`
+2. **Generate narrative timeline & action matrix** → `timeline.md`:
+   - Strict chronological timeline (day, hour, weather, location)
+   - Movement constraints, physical travel time, and environmental checks
 
-3. **Agent context update**:
-   - Run `.specify/scripts/bash/update-agent-context.sh iflow`
-   - These scripts detect which AI agent is in use
-   - Update the appropriate agent-specific context file
-   - Add only new technology from current plan
-   - Preserve manual additions between markers
+3. **Generate clue & foreshadowing registry** → `foreshadowing.md`:
+   - Chekhov's guns tracking (clue ID, plant chapter, payoff chapter, true meaning, status)
 
-**Output**: data-model.md, /contracts/*, quickstart.md, agent-specific file
+4. **Agent context update**:
+   - Run `.specify/scripts/bash/update-agent-context.sh antigravity`
+   - Update project context in AGENTS.md
+
+**Output**: characters.md, timeline.md, foreshadowing.md, plan.md, agent-specific file
 
 ## Key rules
 

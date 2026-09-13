@@ -103,12 +103,32 @@ Focus on high-signal findings. Limit to 50 findings total; aggregate remainder i
 - Tasks with no mapped requirement/story
 - Non-functional requirements not reflected in tasks (e.g., performance, security)
 
-#### F. Inconsistency
+#### F. Inconsistency & Terminology Drift
 
 - Terminology drift (same concept named differently across files)
-- Data entities referenced in plan but absent in spec (or vice versa)
-- Task ordering contradictions (e.g., integration tasks before foundational setup tasks without dependency note)
-- Conflicting requirements (e.g., one requires Next.js while other specifies Vue)
+- Data entities or characters referenced in plan but absent in spec (or vice versa)
+- Task ordering contradictions
+
+#### G. Narrative & Causal Consistency (Fiction Quality)
+
+- Physical law violations (impossible locked rooms without physical cause)
+- Spatiotemporal contradictions against `timeline.md` (travel speed, weather, daylight)
+- Setting mutation drift (unpropagated changes across chapters)
+
+#### H. Character Agency & Motivation Alignment
+
+- Character actions contradicting established profiles in `characters.md`
+- Inconsistent psychological wounds, sudden out-of-character behavior, or puppet behavior
+
+#### I. Foreshadowing & Chekhov's Gun Closure
+
+- Audit `foreshadowing.md` against completed text: calculate closed vs dangling clue ratio
+- Flag any planted item lacking resolution before final chapter
+
+#### J. Linguistic Texture & Anti-Cliché Check
+
+- Flag prohibited AI cliches and repetitiveness ("倒吸一口凉气", "嘴角勾起冷笑", "深邃的目光")
+- Verify sensory details and period-appropriate dialogue formatting
 
 ### 5. Severity Assignment
 
