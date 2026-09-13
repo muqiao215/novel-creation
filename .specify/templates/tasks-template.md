@@ -1,250 +1,73 @@
----
-description: "Task list template for feature implementation"
----
+# 创作任务清单 (Novel Drafting & Crafting Tasks): [作品名称]
 
-# Tasks: [FEATURE NAME]
-
-**Input**: Design documents from `/specs/[###-feature-name]/`
-**Prerequisites**: plan.md (required), spec.md (required for user stories), research.md, data-model.md, contracts/
-
-**Tests**: The examples below include test tasks. Tests are OPTIONAL - only include them if explicitly requested in the feature specification.
-
-**Organization**: Tasks are grouped by user story to enable independent implementation and testing of each story.
-
-## Format: `[ID] [P?] [Story] Description`
-- **[P]**: Can run in parallel (different files, no dependencies)
-- **[Story]**: Which user story this task belongs to (e.g., US1, US2, US3)
-- Include exact file paths in descriptions
-
-## Path Conventions
-- **Single project**: `src/`, `tests/` at repository root
-- **Web app**: `backend/src/`, `frontend/src/`
-- **Mobile**: `api/src/`, `ios/src/` or `android/src/`
-- Paths shown below assume single project - adjust based on plan.md structure
-
-<!-- 
-  ============================================================================
-  IMPORTANT: The tasks below are SAMPLE TASKS for illustration purposes only.
-  
-  The /speckit-tasks command MUST replace these with actual tasks based on:
-  - User stories from spec.md (with their priorities P1, P2, P3...)
-  - Feature requirements from plan.md
-  - Entities from data-model.md
-  - Endpoints from contracts/
-  
-  Tasks MUST be organized by user story so each story can be:
-  - Implemented independently
-  - Tested independently
-  - Delivered as an MVP increment
-  
-  DO NOT keep these sample tasks in the generated tasks.md file.
-  ============================================================================
--->
-
-## Phase 1: Setup (Shared Infrastructure)
-
-**Purpose**: Project initialization and basic structure
-
-- [ ] T001 Create project structure per implementation plan
-- [ ] T002 Initialize [language] project with [framework] dependencies
-- [ ] T003 [P] Configure linting and formatting tools
+**输入依赖**: 
+- 规格书: `specs/[###-book-slug]/spec.md`
+- 架构规划: `specs/[###-book-slug]/plan.md`
+- 人物事实表: `specs/[###-book-slug]/characters.md`
+- 时间线行动矩阵: `specs/[###-book-slug]/timeline.md`
+- 伏笔与线索清单: `specs/[###-book-slug]/foreshadowing.md`
 
 ---
 
-## Phase 2: Foundational (Blocking Prerequisites)
+## 任务组织架构原则
 
-**Purpose**: Core infrastructure that MUST be complete before ANY user story can be implemented
-
-**⚠️ CRITICAL**: No user story work can begin until this phase is complete
-
-Examples of foundational tasks (adjust based on your project):
-
-- [ ] T004 Setup database schema and migrations framework
-- [ ] T005 [P] Implement authentication/authorization framework
-- [ ] T006 [P] Setup API routing and middleware structure
-- [ ] T007 Create base models/entities that all stories depend on
-- [ ] T008 Configure error handling and logging infrastructure
-- [ ] T009 Setup environment configuration management
-
-**Checkpoint**: Foundation ready - user story implementation can now begin in parallel
+小说创作任务严格按**叙事推进与文学打磨流程**编排：
+1. **阶段一：世界观与核心追踪体系建立**（宪章、人物表、时间线、伏笔库、意象调色盘）
+2. **阶段二至四：分卷分章执笔与场景推进**（每章落实：目标→冲突→转折；埋入指定编号伏笔）
+3. **设定突变与影响链治理**（在发现逻辑冲突时动态介入，自三表辐射更新）
+4. **终局收束与伏笔全量核销**（确保草蛇灰线 100% 闭环）
+5. **文学品质专项精修**（Show Don't Tell、台词潜台词化、去除 AI 滥俗陈词）
 
 ---
 
-## Phase 3: User Story 1 - [Title] (Priority: P1) 🎯 MVP
+## 阶段一：叙事基底与世界观锚定 (Setup & Narrative Anchors)
 
-**Goal**: [Brief description of what this story delivers]
-
-**Independent Test**: [How to verify this story works on its own]
-
-### Tests for User Story 1 (OPTIONAL - only if tests requested) ⚠️
-
-**NOTE: Write these tests FIRST, ensure they FAIL before implementation**
-
-- [ ] T010 [P] [US1] Contract test for [endpoint] in tests/contract/test_[name].py
-- [ ] T011 [P] [US1] Integration test for [user journey] in tests/integration/test_[name].py
-
-### Implementation for User Story 1
-
-- [ ] T012 [P] [US1] Create [Entity1] model in src/models/[entity1].py
-- [ ] T013 [P] [US1] Create [Entity2] model in src/models/[entity2].py
-- [ ] T014 [US1] Implement [Service] in src/services/[service].py (depends on T012, T013)
-- [ ] T015 [US1] Implement [endpoint/feature] in src/[location]/[file].py
-- [ ] T016 [US1] Add validation and error handling
-- [ ] T017 [US1] Add logging for user story 1 operations
-
-**Checkpoint**: At this point, User Story 1 should be fully functional and testable independently
+- [ ] T001 确立并完善创作宪章 `.specify/memory/constitution.md`（定义推理原则、人物心性、时空守恒、文学质感、伏笔必收）
+- [ ] T002 制定作品规格书 `specs/[###-book-slug]/spec.md`（确认一句话前提、主题价值谱、POV视点限制、章节里程碑）
+- [ ] T003 完成叙事架构规划 `specs/[###-book-slug]/plan.md`（确认结构模型、场景-续事机制、五感调色盘）
+- [ ] T004 [P] 建立人物事实与弧光表 `characters.md`（欲望/需要、过往创伤、信奉谎言、言谈口癖、秘密档案）
+- [ ] T005 [P] 建立时空编年史与行动矩阵 `timeline.md`（严格时辰、天气演变、移动时速、物理痕迹消长）
+- [ ] T006 [P] 建立伏笔与线索全量清单 `foreshadowing.md`（登记 FG-01 至 FG-XX，标记埋设点与预期回收点）
 
 ---
 
-## Phase 4: User Story 2 - [Title] (Priority: P2)
+## 阶段二：第一幕·破局与涉入深渊 (Act I: The Inciting Disturbance)
 
-**Goal**: [Brief description of what this story delivers]
-
-**Independent Test**: [How to verify this story works on its own]
-
-### Tests for User Story 2 (OPTIONAL - only if tests requested) ⚠️
-
-- [ ] T018 [P] [US2] Contract test for [endpoint] in tests/contract/test_[name].py
-- [ ] T019 [P] [US2] Integration test for [user journey] in tests/integration/test_[name].py
-
-### Implementation for User Story 2
-
-- [ ] T020 [P] [US2] Create [Entity] model in src/models/[entity].py
-- [ ] T021 [US2] Implement [Service] in src/services/[service].py
-- [ ] T022 [US2] Implement [endpoint/feature] in src/[location]/[file].py
-- [ ] T023 [US2] Integrate with User Story 1 components (if needed)
-
-**Checkpoint**: At this point, User Stories 1 AND 2 should both work independently
+- [ ] T007 构思并撰写第 1 章（建立日常、遭遇激励事件、初露危机；埋设初始核心线索；核查首个场景价值转折）
+- [ ] T008 构思并撰写第 2 章（主角展开调查、初探核心对手/涉案人物；呈现阶层白描与五感质感；埋设次级线索）
+- [ ] T009 构思并撰写第 3 章（线索碰撞、触及旧案疮疤；人物关系产生首次裂痕；推进时间线矩阵）
 
 ---
 
-## Phase 5: User Story 3 - [Title] (Priority: P3)
+## 阶段三：第二幕·螺旋上升与中点危机 (Act II: Escalation & The Mirror Moment)
 
-**Goal**: [Brief description of what this story delivers]
-
-**Independent Test**: [How to verify this story works on its own]
-
-### Tests for User Story 3 (OPTIONAL - only if tests requested) ⚠️
-
-- [ ] T024 [P] [US3] Contract test for [endpoint] in tests/contract/test_[name].py
-- [ ] T025 [P] [US3] Integration test for [user journey] in tests/integration/test_[name].py
-
-### Implementation for User Story 3
-
-- [ ] T026 [P] [US3] Create [Entity] model in src/models/[entity].py
-- [ ] T027 [US3] Implement [Service] in src/services/[service].py
-- [ ] T028 [US3] Implement [endpoint/feature] in src/[location]/[file].py
-
-**Checkpoint**: All user stories should now be independently functional
+- [ ] T010 构思并撰写第 4 章（【镜子时刻/中点危机】：凶手或对抗势力升级压迫；主角直面自身无能与认知谎言）
+- [ ] T011 构思并撰写第 5 章（绝境反扑、严阵以待；外部防御在严密推理下仍遭突破；坠入灵魂黑夜）
+- [ ] T012 构思并撰写第 6 章（线索复盘与物理溯源；识破表象下的致命口供/物证破绽；准备终极对质）
 
 ---
 
-[Add more user story phases as needed, following the same pattern]
+## 阶段四：第三幕·高潮对决与终局收口 (Act III: Climax & Resolution)
+
+- [ ] T013 构思并撰写第 7 章（【终极高潮对质】：双雄隔案/绝境对决；撕下所有伪装，价值冲突达到白热化，揭开终极真相）
+- [ ] T014 构思并撰写第 8 章（【尾声与道德救赎】：伏笔全部收口，面对公义与法理的终极抉择；余韵缭绕）
 
 ---
 
-## Phase N: Polish & Cross-Cutting Concerns
+## 阶段五：文学品质与大师技法精修 (Literary Craft Polishing)
 
-**Purpose**: Improvements that affect multiple user stories
-
-- [ ] TXXX [P] Documentation updates in docs/
-- [ ] TXXX Code cleanup and refactoring
-- [ ] TXXX Performance optimization across all stories
-- [ ] TXXX [P] Additional unit tests (if requested) in tests/unit/
-- [ ] TXXX Security hardening
-- [ ] TXXX Run quickstart.md validation
-
----
-
-## Dependencies & Execution Order
-
-### Phase Dependencies
-
-- **Setup (Phase 1)**: No dependencies - can start immediately
-- **Foundational (Phase 2)**: Depends on Setup completion - BLOCKS all user stories
-- **User Stories (Phase 3+)**: All depend on Foundational phase completion
-  - User stories can then proceed in parallel (if staffed)
-  - Or sequentially in priority order (P1 → P2 → P3)
-- **Polish (Final Phase)**: Depends on all desired user stories being complete
-
-### User Story Dependencies
-
-- **User Story 1 (P1)**: Can start after Foundational (Phase 2) - No dependencies on other stories
-- **User Story 2 (P2)**: Can start after Foundational (Phase 2) - May integrate with US1 but should be independently testable
-- **User Story 3 (P3)**: Can start after Foundational (Phase 2) - May integrate with US1/US2 but should be independently testable
-
-### Within Each User Story
-
-- Tests (if included) MUST be written and FAIL before implementation
-- Models before services
-- Services before endpoints
-- Core implementation before integration
-- Story complete before moving to next priority
-
-### Parallel Opportunities
-
-- All Setup tasks marked [P] can run in parallel
-- All Foundational tasks marked [P] can run in parallel (within Phase 2)
-- Once Foundational phase completes, all user stories can start in parallel (if team capacity allows)
-- All tests for a user story marked [P] can run in parallel
-- Models within a story marked [P] can run in parallel
-- Different user stories can be worked on in parallel by different team members
+- [ ] T015 **感官显影与反抽象精修 (Show, Don't Tell)**：
+  - 全文检索并消除抽象情绪定性词（愤怒、害怕、震惊、悲痛），替换为肌肉震颤、呼吸频率、喉结滚动、手部微动作。
+- [ ] T016 **台词潜台词与冰山精修 (Subtext & Hemingway Iceberg)**：
+  - 检查关键对话，杜绝“说出心中真实所想”的水词，赋予言外之意、避而不答、转移话题等丰富潜台词。
+- [ ] T017 **词汇纯净度与去陈词滥调检视 (Anti-Cliché & Voice Pureness)**：
+  - 检索禁忌词库（“倒吸一口凉气”、“嘴角泛起冷笑”、“眼底闪过复杂”、“仿佛时间停止”），全部重写。
+- [ ] T018 **伏笔清单 100% 闭环核销**：
+  - 对照 `foreshadowing.md`，逐条确认每一项道具、细节在正文中得到交代，严禁烂尾。
 
 ---
 
-## Parallel Example: User Story 1
+## 阶段六：全维度一致性终审 (Quality & Consistency Audit)
 
-```bash
-# Launch all tests for User Story 1 together (if tests requested):
-Task: "Contract test for [endpoint] in tests/contract/test_[name].py"
-Task: "Integration test for [user journey] in tests/integration/test_[name].py"
-
-# Launch all models for User Story 1 together:
-Task: "Create [Entity1] model in src/models/[entity1].py"
-Task: "Create [Entity2] model in src/models/[entity2].py"
-```
-
----
-
-## Implementation Strategy
-
-### MVP First (User Story 1 Only)
-
-1. Complete Phase 1: Setup
-2. Complete Phase 2: Foundational (CRITICAL - blocks all stories)
-3. Complete Phase 3: User Story 1
-4. **STOP and VALIDATE**: Test User Story 1 independently
-5. Deploy/demo if ready
-
-### Incremental Delivery
-
-1. Complete Setup + Foundational → Foundation ready
-2. Add User Story 1 → Test independently → Deploy/Demo (MVP!)
-3. Add User Story 2 → Test independently → Deploy/Demo
-4. Add User Story 3 → Test independently → Deploy/Demo
-5. Each story adds value without breaking previous stories
-
-### Parallel Team Strategy
-
-With multiple developers:
-
-1. Team completes Setup + Foundational together
-2. Once Foundational is done:
-   - Developer A: User Story 1
-   - Developer B: User Story 2
-   - Developer C: User Story 3
-3. Stories complete and integrate independently
-
----
-
-## Notes
-
-- [P] tasks = different files, no dependencies
-- [Story] label maps task to specific user story for traceability
-- Each user story should be independently completable and testable
-- Verify tests fail before implementing
-- Commit after each task or logical group
-- Stop at any checkpoint to validate story independently
-- Avoid: vague tasks, same file conflicts, cross-story dependencies that break independence
-
-
+- [ ] T019 运行 `/speckit-analyze` 执行六维文学质检（逻辑因果、人物心性、时间线守恒、伏笔闭环、场景转折、语言纯度）。
+- [ ] T020 生成全书合辑文件与版本结项归档。

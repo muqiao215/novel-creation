@@ -1,104 +1,87 @@
-# Implementation Plan: [FEATURE]
+# 小说创作规划书 (Narrative Architecture Plan): [作品名称]
 
-**Branch**: `[###-feature-name]` | **Date**: [DATE] | **Spec**: [link]
-**Input**: Feature specification from `/specs/[###-feature-name]/spec.md`
+**分支**: `[###-book-slug]` | **日期**: [DATE] | **对应规格**: [spec.md](./spec.md)
 
-**Note**: This template is filled in by the `/speckit-plan` command. See `.specify/templates/commands/plan.md` for the execution workflow.
+---
 
-## Summary
+## 一、叙事架构与结构模型 (Structural Architecture)
 
-[Extract from feature spec: primary requirement + technical approach from research]
+### 1. 结构模型选择
+- **选定模型**: [经典三幕八段体 / 特鲁比22步 / 英雄之旅 / 起承转合章回体 / 镜像双螺旋]
+- **节奏律动控制**:
+  - 全书总篇幅: [X] 卷 / [Y] 章 / 预定 [Z] 万字。
+  - 核心节点字数切分:
+    - 激励事件: 10% 处
+    - 第一幕高潮 (突破点): 25% 处
+    - 中点危机 / 镜子时刻: 50% 处
+    - 灵魂黑夜 / 危机破灭: 75% 处
+    - 终极高潮对决: 85% ~ 90% 处
+    - 尾声与余韵: 95% ~ 100% 处
 
-## Technical Context
+---
 
-<!--
-  ACTION REQUIRED: Replace the content in this section with the technical details
-  for the project. The structure here is presented in advisory capacity to guide
-  the iteration process.
--->
+## 二、人物动力学与关系网络 (Character Web & Dynamics)
 
-**Language/Version**: [e.g., Python 3.11, Swift 5.9, Rust 1.75 or NEEDS CLARIFICATION]  
-**Primary Dependencies**: [e.g., FastAPI, UIKit, LLVM or NEEDS CLARIFICATION]  
-**Storage**: [if applicable, e.g., PostgreSQL, CoreData, files or N/A]  
-**Testing**: [e.g., pytest, XCTest, cargo test or NEEDS CLARIFICATION]  
-**Target Platform**: [e.g., Linux server, iOS 15+, WASM or NEEDS CLARIFICATION]
-**Project Type**: [single/web/mobile - determines source structure]  
-**Performance Goals**: [domain-specific, e.g., 1000 req/s, 10k lines/sec, 60 fps or NEEDS CLARIFICATION]  
-**Constraints**: [domain-specific, e.g., <200ms p95, <100MB memory, offline-capable or NEEDS CLARIFICATION]  
-**Scale/Scope**: [domain-specific, e.g., 10k users, 1M LOC, 50 screens or NEEDS CLARIFICATION]
+### 1. 主角的内在张力引擎 (Truby / McKee Model)
+- **外在欲望 (Want / External Goal)**: [主角在整部小说中追逐的具体、可见的目标]
+- **内在需要 (Need / Moral Flaw)**: [主角内心必须克服的认知盲区或道德残缺]
+- **过往幽灵 (The Ghost / Backstory Wound)**: [深植于过去、不可触碰的精神创伤]
+- **信奉的谎言 (The Lie He Believes)**: [主角误以为能保护自己的信条]
 
-## Constitution Check
+### 2. 人物镜像与阴影设计 (Mirror & Shadow Characters)
+- **主要对手 (The Primary Opponent)**: [并非单纯的反派，而是与主角争夺同一终极价值、行事手段截然相反的镜像实体]
+- **同盟与导师 (Allies & Mentors)**: [提供不同世界观碰撞的配角，各具独特言谈口癖与阶层烙印]
+- **变色龙/虚假同盟 (The Shapeshifter)**: [中途发生立场游移、带来重大反转的关键人物]
 
-*GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
+---
 
-[Gates determined based on constitution file]
+## 三、场景切片与因果推进 (Scene & Sequel Mechanics)
 
-## Project Structure
+每一章节均由一个或多个“场景（Scene）”与“续事（Sequel）”严密咬合而成（Dwight Swain 经典技法）：
 
-### Documentation (this feature)
+### 1. 场景单元 (The Scene - 动作与冲突)
+- **目标 (Goal)**: 本场景人物企图达成的明确具体意图。
+- **阻碍与鸿沟 (Conflict & The Gap)**: 人物行动撞上现实阻力，发生意料之外的反弹。
+- **灾难/受挫 (Disaster / Turn)**: 场景结尾处价值状态发生不可逆的正负翻转。
+
+### 2. 续事单元 (The Sequel - 反应与重整)
+- **情感反应 (Emotional Reaction)**: 遭受打击后的生理与心理震荡。
+- **两难困境 (Moral/Strategic Dilemma)**: 在两个同样糟糕的选择中被迫权衡。
+- **全新决定 (New Decision)**: 制定下一个场景的目标，推动情节滚滚向前。
+
+---
+
+## 四、核心追踪档案体系 (Core Narrative Artifacts)
+
+本小说工程在 `specs/[###-book-slug]/` 下维护三套不可或缺的一致性追踪档案：
 
 ```
-specs/[###-feature]/
-├── plan.md              # This file (/speckit-plan command output)
-├── research.md          # Phase 0 output (/speckit-plan command)
-├── data-model.md        # Phase 1 output (/speckit-plan command)
-├── quickstart.md        # Phase 1 output (/speckit-plan command)
-├── contracts/           # Phase 1 output (/speckit-plan command)
-└── tasks.md             # Phase 2 output (/speckit-tasks command - NOT created by /speckit-plan)
+specs/[###-book-slug]/
+├── spec.md                  # 规格书：核心前提、主旨、POV、验收标准
+├── plan.md                  # 创作规划（本文件）
+├── characters.md            # 人物事实与弧光表（生理特征、经历、动机、口癖、秘密）
+├── timeline.md              # 严格时间线与行动矩阵（物理时空移动守恒、天气与脚程）
+├── foreshadowing.md         # 伏笔与线索全量清单（草蛇灰线编号、埋设章、回收章、真实含义）
+├── scenes.md                # 逐章场景切片与价值转折卡片
+└── tasks.md                 # 分章创作与润色任务清单
 ```
 
-### Source Code (repository root)
-<!--
-  ACTION REQUIRED: Replace the placeholder tree below with the concrete layout
-  for this feature. Delete unused options and expand the chosen structure with
-  real paths (e.g., apps/admin, packages/something). The delivered plan must
-  not include Option labels.
--->
+---
 
-```
-# [REMOVE IF UNUSED] Option 1: Single project (DEFAULT)
-src/
-├── models/
-├── services/
-├── cli/
-└── lib/
+## 五、文学意象与五感调色盘 (Sensory Palette)
 
-tests/
-├── contract/
-├── integration/
-└── unit/
+- **主色调与光影**: [例如：青灰的雪空、炭火的赤红、生锈铜钱的青绿]
+- **嗅觉与味觉图谱**: [例如：松木炭的焦香、煮茶的苦涩、血腥气与腐朽生羊油味]
+- **声音与触感**: [例如：冰凌滴答融化声、风雪中铜铃的狂颤、鹿皮手套上的粗糙触感]
 
-# [REMOVE IF UNUSED] Option 2: Web application (when "frontend" + "backend" detected)
-backend/
-├── src/
-│   ├── models/
-│   ├── services/
-│   └── api/
-└── tests/
+---
 
-frontend/
-├── src/
-│   ├── components/
-│   ├── pages/
-│   └── services/
-└── tests/
+## 六、创作宪章符合性核查 (Constitution Check)
 
-# [REMOVE IF UNUSED] Option 3: Mobile + API (when "iOS/Android" detected)
-api/
-└── [same as backend above]
-
-ios/ or android/
-└── [platform-specific structure: feature modules, UI flows, platform tests]
-```
-
-**Structure Decision**: [Document the selected structure and reference the real
-directories captured above]
-
-## Complexity Tracking
-
-*Fill ONLY if Constitution Check has violations that must be justified*
-
-| Violation | Why Needed | Simpler Alternative Rejected Because |
-|-----------|------------|-------------------------------------|
-| [e.g., 4th project] | [current need] | [why 3 projects insufficient] |
-| [e.g., Repository pattern] | [specific problem] | [why direct DB access insufficient] |
+| 宪章维度 | 违规风险防范 | 检核标准 |
+|---------|-------------|---------|
+| **因果律与解谜** | 严禁凭空空降线索或借神鬼破案 | 所有物证必须在解密前两章以上自然出现 |
+| **时空守恒** | 严禁人物在恶劣天气或长距离中瞬间移动 | 脚程、时辰与天气状况严格锚定于 `timeline.md` |
+| **人物主体性** | 严禁人物为推动情节做出违背其心性的举动 | 动机必须追溯至其背景创伤与内在欲望 |
+| **文学纯度** | 严禁滥用空洞副词与 AI 常见套话 | 执行 Show, Don't Tell 原则，强化五感与白描 |
+| **伏笔闭环** | 严禁挖坑不填或遗忘关键道具 | 全文终章对照 `foreshadowing.md` 逐项清点销项 |

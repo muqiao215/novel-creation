@@ -1,115 +1,78 @@
-# Feature Specification: [FEATURE NAME]
+# 作品规格书 (Novel Specification): [作品名称]
 
-**Feature Branch**: `[###-feature-name]`  
-**Created**: [DATE]  
-**Status**: Draft  
-**Input**: User description: "$ARGUMENTS"
-
-## User Scenarios & Testing *(mandatory)*
-
-<!--
-  IMPORTANT: User stories should be PRIORITIZED as user journeys ordered by importance.
-  Each user story/journey must be INDEPENDENTLY TESTABLE - meaning if you implement just ONE of them,
-  you should still have a viable MVP (Minimum Viable Product) that delivers value.
-  
-  Assign priorities (P1, P2, P3, etc.) to each story, where P1 is the most critical.
-  Think of each story as a standalone slice of functionality that can be:
-  - Developed independently
-  - Tested independently
-  - Deployed independently
-  - Demonstrated to users independently
--->
-
-### User Story 1 - [Brief Title] (Priority: P1)
-
-[Describe this user journey in plain language]
-
-**Why this priority**: [Explain the value and why it has this priority level]
-
-**Independent Test**: [Describe how this can be tested independently - e.g., "Can be fully tested by [specific action] and delivers [specific value]"]
-
-**Acceptance Scenarios**:
-
-1. **Given** [initial state], **When** [action], **Then** [expected outcome]
-2. **Given** [initial state], **When** [action], **Then** [expected outcome]
+**书名分支**: `[###-book-slug]`  
+**立项日期**: [DATE]  
+**当前状态**: Draft (大纲规格阶段)  
+**类型标签**: [例如：古风悬疑 / 硬科幻 / 现实世情 / 志怪武侠 / 历史传奇]  
+**体量规划**: 全书预计 [X] 卷 / [Y] 章，总字数约 [Z] 万字（单章标准 [A] ~ [B] 字）
 
 ---
 
-### User Story 2 - [Brief Title] (Priority: P2)
+## 一、核心概念与主旨前提 (Premise & High Concept)
 
-[Describe this user journey in plain language]
+### 1. 一句话故事前提 (Logline)
+> [当发生某激励事件时]，[具有核心弱点的主角] 必须 [克服核心对抗/达成外在目标]，否则将面临 [无可挽回的致命代价]。
 
-**Why this priority**: [Explain the value and why it has this priority level]
-
-**Independent Test**: [Describe how this can be tested independently]
-
-**Acceptance Scenarios**:
-
-1. **Given** [initial state], **When** [action], **Then** [expected outcome]
-
----
-
-### User Story 3 - [Brief Title] (Priority: P3)
-
-[Describe this user journey in plain language]
-
-**Why this priority**: [Explain the value and why it has this priority level]
-
-**Independent Test**: [Describe how this can be tested independently]
-
-**Acceptance Scenarios**:
-
-1. **Given** [initial state], **When** [action], **Then** [expected outcome]
+### 2. 主题与道德辩题 (Theme & Moral Dilemma)
+- **核心主旨**: [一句话阐述本书试图探讨的人性/社会/哲学命题]
+- **价值对立两极 (McKee Value Spectrum)**:
+  - 正极（Positive）: [例如：法度严正、追求真相]
+  - 矛盾极（Contradictory）: [例如：私刑复仇、快意恩仇]
+  - 反极（Contrary）: [例如：官官相护、同流合污]
+  - 负极/绝望极（Negation of the Negation）: [例如：以正义之名行灭绝之恶]
+- **主角的谎言与真相 (The Lie vs. The Truth)**:
+  - **主角深信的谎言**: [角色开篇赖以生存但存在致命缺陷的世界观]
+  - **最终领悟的真相**: [历经磨难后精神重生所认同的残酷或崇高真理]
 
 ---
 
-[Add more user stories as needed, each with an assigned priority]
+## 二、叙事视角与文风美学 (POV & Narrative Voice)
 
-### Edge Cases
+### 1. 叙事视角设定
+- **视点选择**: [严格第三人称限制视角 / 第一人称有限视角 / 多POV交替（明确交替规则）]
+- **视点焦点**: [锁定主角，严禁无铺垫越界进入对手/旁观者内心独白（严防神之视角窥探）]
+- **叙事距离**: [贴身跟随 / 适度疏离 / 冷峻客观 / 沉浸心理流]
 
-<!--
-  ACTION REQUIRED: The content in this section represents placeholders.
-  Fill them out with the right edge cases.
--->
+### 2. 文学质感与语言调色盘 (Sensory Palette & Tone)
+- **时代质感与语域**: [例如：宋代市井宋词语调 / 汉唐雄浑古朴 / 晚明小说白描 / 赛博朋克冰冷技术流]
+- **核心意象 (Central Motifs)**:
+  - [意象1]: [如：浸透朱砂的前朝古钱，象征罪恶同盟与夺命因果]
+  - [意象2]: [如：无休止的漫天暴雪，象征窒息封闭的社会环境与被掩盖的罪证]
+- **行文负面清单 (Anti-Patterns / Prohibited Tropes)**:
+  - 严禁使用网文与AI假大空套话（如“倒吸一口凉气”、“嘴角勾起一抹冷笑”、“眼底闪过复杂神色”）。
+  - 严禁抽象情绪定性（写“手背青筋暴起，指尖将茶盏捏出裂纹”，严禁写“他愤怒到了极点”）。
 
-- What happens when [boundary condition]?
-- How does system handle [error scenario]?
+---
 
-## Requirements *(mandatory)*
+## 三、戏剧冲突主轴与核心对抗 (Central Conflict & Antagonism)
 
-<!--
-  ACTION REQUIRED: The content in this section represents placeholders.
-  Fill them out with the right functional requirements.
--->
+### 1. 核心戏剧问题 (Central Dramatic Question)
+- [例如：一个恪守律法的寒门推官，能否在连环密室与全城暴雪中，揭露当朝权贵十二年前埋葬的滔天血案？]
 
-### Functional Requirements
+### 2. 对抗层级设计 (Levels of Conflict)
+- **内心冲突 (Inner / Psychological)**: [主角自身创伤、执念、信念动摇]
+- **人际冲突 (Personal / Relational)**: [主角与嫌疑人、搭档、对手之间的心理博弈与试探]
+- **社会与体制冲突 (Extra-Personal / Social)**: [腐败官僚体系、阶级鸿沟、时代风暴]
+- **物理与环境冲突 (Physical / Environmental)**: [大雪封城、密室物理封锁、剧毒蔓延时限]
 
-- **FR-001**: System MUST [specific capability, e.g., "allow users to create accounts"]
-- **FR-002**: System MUST [specific capability, e.g., "validate email addresses"]  
-- **FR-003**: Users MUST be able to [key interaction, e.g., "reset their password"]
-- **FR-004**: System MUST [data requirement, e.g., "persist user preferences"]
-- **FR-005**: System MUST [behavior, e.g., "log all security events"]
+---
 
-*Example of marking unclear requirements:*
+## 四、宏观叙事节拍与章节里程碑 (Story Beats & Milestones)
 
-- **FR-006**: System MUST authenticate users via [NEEDS CLARIFICATION: auth method not specified - email/password, SSO, OAuth?]
-- **FR-007**: System MUST retain user data for [NEEDS CLARIFICATION: retention period not specified]
+| 阶段 / 里程碑 | 对应章节 | 核心事件与节拍 (McKee / Truby Beats) | 主角价值状态转变 (Value Turn) |
+|:---|:---:|:---|:---:|
+| **1. 现状与激励事件 (Inciting Incident)** | 第 1 章 | 平衡被打破：第一起不可能命案爆发，主角被迫卷入风暴 | 平静/日常 → 震恐/卷入 (-) |
+| **2. 涉入深渊 (Lock-in / Plot Point 1)** | 第 2~3 章 | 调查受挫，发现连环案并非随机，而是系统性复仇，牵出旧案 | 盲从/公事 → 触及深渊/动摇 (-/+) |
+| **3. 镜子时刻 (Mirror Moment / Midpoint)** | 第 4 章 | 中点危机：凶手预告下一起命案，主角被迫审视自身无能与体制之恶 | 怀疑外界 → 质问自我 (+ → -) |
+| **4. 绝境与灵魂黑夜 (Dark Night of the Soul)** | 第 5~6 章 | 防线全面崩溃，核心嫌疑人在重围中毙命，所有线索似乎断绝 | 掌控 → 坠入绝境 (--) |
+| **5. 顿悟与决战对质 (Climax & Showdown)** | 第 7 章 | 识破关键破绽，撕下所有伪装，双雄/隔案对质，真理赤裸相见 | 绝望 → 顿悟直面破局 (++) |
+| **6. 终局与道德抉择 (Resolution & Payoff)** | 第 8 章 | 伏笔全部回收，面对法理与公义的终极抉择，余音袅袅 | 混沌/创伤 → 精神重生/大道初显 (+) |
 
-### Key Entities *(include if feature involves data)*
+---
 
-- **[Entity 1]**: [What it represents, key attributes without implementation]
-- **[Entity 2]**: [What it represents, relationships to other entities]
+## 五、验收标准与质量闸门 (Novel Acceptance Criteria)
 
-## Success Criteria *(mandatory)*
-
-<!--
-  ACTION REQUIRED: Define measurable success criteria.
-  These must be technology-agnostic and measurable.
--->
-
-### Measurable Outcomes
-
-- **SC-001**: [Measurable metric, e.g., "Users can complete account creation in under 2 minutes"]
-- **SC-002**: [Measurable metric, e.g., "System handles 1000 concurrent users without degradation"]
-- **SC-003**: [User satisfaction metric, e.g., "90% of users successfully complete primary task on first attempt"]
-- **SC-004**: [Business metric, e.g., "Reduce support tickets related to [X] by 50%"]
+- **CRIT-01 (因果律与公平性)**: 悬疑/反转具备充分前置铺垫（至少提前2~3章隐蔽呈现），无机械降神。
+- **CRIT-02 (人物弧光完整性)**: 主角经历内在信念重塑，反派行事具有令人叹息的心性必然性，杜绝脸谱恶人。
+- **CRIT-03 (场景生机律)**: 每一章均必须完成一次明确的“场景价值转折（Scene Turn）”，杜绝无戏剧推进的水章节。
+- **CRIT-04 (草蛇灰线回收率)**: 所有在《伏笔清单》中登记的关键线索与特异道具，终卷闭环率必须达到 100%。
